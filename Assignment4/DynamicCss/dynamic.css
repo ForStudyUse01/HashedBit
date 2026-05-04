@@ -1,0 +1,47 @@
+let textBox = document.getElementById("text-container");
+let colorInput = document.getElementById("colorbox");
+let colorBtn = document.getElementById("colorchange");
+let sizeSlider = document.getElementById("fontsize");
+let italicBtn = document.getElementById("italic");
+let underlineBtn = document.getElementById("underline");
+let boldBtn = document.getElementById("bold");
+let fontList = document.getElementById("list");
+let getCssBtn = document.getElementById("getstyle");
+let output = document.getElementById("css-props");
+ 
+colorBtn.onclick = function () {
+    textBox.style.color = colorInput.value;
+};
+ 
+sizeSlider.oninput = function () {
+    textBox.style.fontSize = sizeSlider.value + "px";
+};
+ 
+italicBtn.onclick = function () {
+    textBox.style.fontStyle =
+        textBox.style.fontStyle === "italic" ? "normal" : "italic";
+};
+ 
+underlineBtn.onclick = function () {
+    textBox.style.textDecoration =
+        textBox.style.textDecoration === "underline" ? "none" : "underline";
+};
+ 
+boldBtn.onclick = function () {
+    textBox.style.fontWeight =
+        textBox.style.fontWeight === "bold" ? "normal" : "bold";
+};
+ 
+fontList.onchange = function () {
+    textBox.style.fontFamily = fontList.value;
+};
+ 
+getCssBtn.onclick = function () {
+    output.innerText =
+        "color: " + colorInput.value + "; " +
+        "font-size: " + sizeSlider.value + "px; " +
+        "text-decoration: " + textBox.style.textDecoration + "; " +
+        "font-style: " + textBox.style.fontStyle + "; " +
+        "font-weight: " + textBox.style.fontWeight + "; " +
+        "font-family: " + fontList.value + ";";
+};
