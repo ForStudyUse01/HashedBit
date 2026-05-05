@@ -33,8 +33,8 @@ function getOddNumbers(arr) {
  
 // 6. person object + greeting
 const person = {
-  name: "Kirti",
-  age: 18,
+  name: "Yuvraj",
+  age: 20,
   occupation: "Student"
 };
  
